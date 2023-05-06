@@ -1,10 +1,9 @@
-import { component$, Slot, useStyles$ } from '@builder.io/qwik';
-import { routeLoader$ } from '@builder.io/qwik-city';
+import { component$, Slot } from '@builder.io/qwik';
+import { Link, routeLoader$ } from '@builder.io/qwik-city';
 
-import Header from '~/components/starter/header/header';
-import Footer from '~/components/starter/footer/footer';
 
-import styles from './styles.css?inline';
+import { Navbar } from '~/components/navbar/Navbar';
+import { Footer } from '~/components/footer/Footer';
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -13,10 +12,14 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
-  useStyles$(styles);
+
   return (
     <>
-      <Header />
+      <Navbar>
+        <div q:slot='navLogo' class={""}>
+          <Link href='/' class={"font-bold text-lg text-primary-800 dark:text-white"}>TODO Qwik ⚡️</Link>
+        </div>
+      </Navbar>
       <main>
         <Slot />
       </main>

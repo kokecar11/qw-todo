@@ -20,7 +20,7 @@ export default component$(() => {
           <Link href='/' class={"font-bold text-lg text-primary-800 dark:text-white"}>TODO Qwik ⚡️</Link>
         </div>
       </Navbar>
-      <main>
+      <main class={"dark:bg-primary-900 bg-white h-screen"}>
         <Slot />
       </main>
       <Footer />

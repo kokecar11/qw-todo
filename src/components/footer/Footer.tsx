@@ -7,7 +7,7 @@ import { MdiGithub, MdiInstagram, MdiTwitter } from '../icons/icons';
 export const Footer = component$( () => {
     // const state = useContext(GlobalStore);
     return ( 
-        <footer class="bg-primary-100 dark:bg-primary-900 text-center text-white ">
+        <footer class="bg-primary-100 bg-opacity-20 dark:bg-primary-900 text-center text-white">
             <div class="pt-6">
                 <div class="mb-6 flex justify-center space-x-6">
                     <Link href="https://github.com/kokecar11" class="icon">
@@ -20,10 +20,7 @@ export const Footer = component$( () => {
                         <MdiInstagram class={"text-2xl text-primary-900"} />
                     </Link>
                 </div>
-            </div>
-            <div
-                class="bg-primary-100 text-primary-900 dark:bg-primary-900 dark:text-white p-1 text-center font-bold">
-                Hecho con el 💙 - Kokecar11
+                <p class="text-primary-900 dark:text-white font-bold">Hecho con el 💙 - Kokecar11</p>
             </div>
         </footer>
     );

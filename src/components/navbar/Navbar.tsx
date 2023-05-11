@@ -6,7 +6,7 @@ export const Navbar = component$(() => {
     useStyles$(styleNavbar);
     return (
         <nav class="navbar">
-            <div class="mx-2 sm:mx-6 lg:mx-40">
+            <div class="mx-2 sm:mx-10">
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="flex flex-1 sm:items-stretch sm:justify-start">
                         <div class="flex flex-shrink-0 items-center">

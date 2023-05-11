@@ -1,4 +1,5 @@
-import { type QwikIntrinsicElements, Slot, component$} from "@builder.io/qwik";
+import { type QwikIntrinsicElements, Slot, component$, useStyles$} from "@builder.io/qwik";
+import stylesCard from './Card.css?inline'
 
 export type CardProps = QwikIntrinsicElements['div'] & {
     title?:string;
@@ -7,8 +8,9 @@ export type CardProps = QwikIntrinsicElements['div'] & {
 }
 
 export default component$( ({title, content, newItem, ...props}: CardProps) => {
+    useStyles$(stylesCard)
     return(
-        <div class={`max-w-sm rounded-sm p-6 bg-white shadow-lg dark:bg-primary-800 relative ${newItem ? 'hover:bg-primary-100 hover:opacity-20 transition-all ease-in-out delay-100 cursor-pointer' : '' }`} {...props}>
+        <div class={`card ${newItem ? 'card-new-item' : '' }`} {...props}>
             {title ? 
                 <a href="#">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary-800 dark:text-white">{title}</h5>

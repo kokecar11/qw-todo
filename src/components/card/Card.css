@@ -1,0 +1,7 @@
+.card{
+    @apply max-w-sm rounded-sm p-6 bg-white shadow-lg dark:bg-primary-800 relative cursor-pointer
+}
+
+.card-new-item{
+    @apply hover:bg-primary-100 hover:opacity-20 transition-all ease-in-out delay-100 
+}

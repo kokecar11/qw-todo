@@ -23,7 +23,7 @@ export default component$( ({title, content, isVisible, onClose, ...props}:Modal
     return (
         <div class={`fixed flex modal ${isVisible.value ? 'block': 'hidden'}`} onClick$={handlerOnClose} id='wrapper-modal' {...props}>
              <div class={"w-[600px]"}>
-                <div class={"bg-white dark:bg-primary-500 p-2 rounded-sm"}>
+                <div class={"bg-white dark:bg-primary-500 p-6 rounded-sm"}>
                     <button class={"btn-secondary"} onClick$={onClose}> Close </button>
                     {title ? <h1 class={"text-xl"}>{title}</h1>:<Slot name="modal-title"/>}
                     {content ? <p>{content}</p>:<Slot name="modal-content"/>}
